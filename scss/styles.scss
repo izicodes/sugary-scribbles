@@ -30,7 +30,7 @@ body {
 			height: 236px;
 			position: relative;
 			border-bottom: 1px solid #cccccc;
-            grid-area: header;
+			grid-area: header;
 
 			#title-image {
 				position: absolute;
@@ -66,19 +66,28 @@ body {
 			}
 		}
 
+		.inner-wrapper {
+			display: grid;
+			grid-template-columns: 20% 80%;
+			height: 76%;
+		}
+
 		aside {
-			background-color: rgb(150, 150, 255);
-            grid-area: aside;
+			background-color: #f7ffff;
+			height: 100%;
 		}
 
 		main {
-			background-color: rgb(146, 255, 146);
-            grid-area: main;
+			background-color: #f7ffff;
+			height: 100%;
 		}
 
 		footer {
 			background-color: #feeae9;
-            grid-area: footer;
+			height: 3.2%;
+			color: rgba(66, 66, 66, 0.48);
+			@include flex(normal);
+			border-top: 1px solid #cccccc;
 		}
 	}
 }

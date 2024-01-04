@@ -70,15 +70,25 @@ body .main-wrapper header #title-image {
     -o-transform: scale(1);
   }
 }
+body .main-wrapper .inner-wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 76%;
+}
 body .main-wrapper aside {
-  background-color: rgb(150, 150, 255);
-  grid-area: aside;
+  background-color: #f7ffff;
+  height: 100%;
 }
 body .main-wrapper main {
-  background-color: rgb(146, 255, 146);
-  grid-area: main;
+  background-color: #f7ffff;
+  height: 100%;
 }
 body .main-wrapper footer {
   background-color: #feeae9;
-  grid-area: footer;
+  height: 3.2%;
+  color: rgba(66, 66, 66, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #cccccc;
 }/*# sourceMappingURL=styles.css.map */
