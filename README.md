@@ -33,4 +33,4 @@ Sugary Scribbles is a delightful mini web app that brings out the artist in you!
 
 ### 🍡 Updates on the project?
 I post about the Sugary Scribbles project over on my coding blog [izicodes.tumblr.com](https://izicodes.tumblr.com/)~! 
-Check out the posts [>> here <<](https://izicodes.tumblr.com/tagged/sugary%20scribbles%20project) ~!
+- Check out the posts [>> here <<](https://izicodes.tumblr.com/tagged/sugary%20scribbles%20project) ~!
