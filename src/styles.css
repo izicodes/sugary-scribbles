@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Onest&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geologica&family=Gideon+Roman&family=Gloock&family=Pixelify+Sans&family=Playfair:opsz@5..1200&family=Ysabeau+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Shantell+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +10,75 @@
 
 * {
   cursor: url("../assets/main-cursor.png"), auto;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #424242;
+}
+
+body {
+  background-color: white;
+  background-image: url(../assets/bg-pattern.png);
+  background-repeat: repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+body .main-wrapper {
+  width: 1250px;
+  height: 1136px;
+  background-color: #edffe4;
+  border: 1px solid #cccccc;
+  border-top: none;
+}
+body .main-wrapper header {
+  background-color: pink;
+  background-image: url("../assets/header-image.png");
+  background-size: cover;
+  width: 100%;
+  height: 236px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  grid-area: header;
+}
+body .main-wrapper header #title-image {
+  position: absolute;
+  right: 80px;
+  top: 17px;
+  animation-name: zoom-in-n-out;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes zoom-in-n-out {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+body .main-wrapper aside {
+  background-color: rgb(150, 150, 255);
+  grid-area: aside;
+}
+body .main-wrapper main {
+  background-color: rgb(146, 255, 146);
+  grid-area: main;
+}
+body .main-wrapper footer {
+  background-color: #feeae9;
+  grid-area: footer;
 }/*# sourceMappingURL=styles.css.map */
