@@ -10,7 +10,7 @@ let isPainting = false;
 let brushSize = 25;
 let startX;
 let startY;
-ctx.strokeStyle = "black";
+ctx.strokeStyle = "#FFCEE4";
 
 aside.addEventListener("click", (e) => {
 	if (e.target.id === "delete") {
@@ -45,6 +45,7 @@ const draw = (e) => {
 	ctx.lineTo(x, y);
 	ctx.stroke();
 };
+
 
 canvas.addEventListener("mousedown", (e) => {
 	isPainting = true;
@@ -106,3 +107,22 @@ document.querySelector('#erase').addEventListener('click', () => {
             x.style.cursor = "url(../assets/pb-clear.ico";
         });
 })
+
+
+//  ---- DOWNLOAD IMAGE ----
+const dlBtn = document.querySelector("#download");
+
+dlBtn.addEventListener("click", function () {
+
+    html2canvas(canvas).then((canvas) => {
+        const imageDataURL = canvas.toDataURL("image/png");
+
+        // Create a download link for the image
+        const a = document.createElement("a");
+        a.href = imageDataURL;
+        a.download = "dog.png";
+        a.click();
+
+    });
+
+});
