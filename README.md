@@ -13,7 +13,7 @@ Sugary Scribbles is a delightful mini web app that brings out the artist in you!
 
 
 ### 🍡 How to Use
-- ~~Open the Sugary Scribbles web app~~ - **still under construction** 🚧 
+- Open the [Sugary Scribbles web app](https://sugary-scribbles.netlify.app/)
 - Think of your favorite doodle and select a pastel color.
 - Let your imagination run wild on the canvas.
 - Save your adorable creation and share it with others!
