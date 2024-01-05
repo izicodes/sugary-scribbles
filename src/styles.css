@@ -163,7 +163,7 @@ body .main-wrapper aside .container .colour-palette .colours img:hover {
 body .main-wrapper aside .container .colour-palette,
 body .main-wrapper aside .container .colours,
 body .main-wrapper aside .container .colours img {
-  cursor: url(../assets/pb-green.ico), auto !important;
+  cursor: url(../assets/pb-green.ico), auto;
 }
 body .main-wrapper aside .container .slider-container {
   width: 100%;
@@ -229,7 +229,7 @@ main canvas {
   height: 760px;
   width: 760px;
   outline: 10px solid #e8dff4;
-  cursor: url(../assets/pb-green.ico), auto !important;
+  cursor: url(../assets/pb-green.ico), auto;
   border-radius: 35px;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;

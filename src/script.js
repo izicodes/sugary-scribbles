@@ -6,12 +6,11 @@ const canvasOffsetY = canvas.offsetTop;
 
 const aside = document.querySelector("aside");
 
-
 let isPainting = false;
 let brushSize = 25;
 let startX;
 let startY;
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "black";
 
 aside.addEventListener("click", (e) => {
 	if (e.target.id === "delete") {
@@ -32,19 +31,19 @@ setInterval(function () {
 }, 100);
 
 const draw = (e) => {
-    if (!isPainting) {
-        return;
-    }
+	if (!isPainting) {
+		return;
+	}
 
-    ctx.lineWidth = brushSize;
-    ctx.lineCap = "round";
+	ctx.lineWidth = brushSize;
+	ctx.lineCap = "round";
 
-    // Adjust the coordinates to be relative to the canvas
-    const x = e.clientX - canvasOffsetX;
-    const y = e.clientY - canvasOffsetY;
+	// Adjust the coordinates to be relative to the canvas
+	const x = e.clientX - canvasOffsetX;
+	const y = e.clientY - canvasOffsetY;
 
-    ctx.lineTo(x, y);
-    ctx.stroke();
+	ctx.lineTo(x, y);
+	ctx.stroke();
 };
 
 canvas.addEventListener("mousedown", (e) => {
@@ -68,5 +67,42 @@ setInterval(function () {
 	document.querySelector("#currentSize").textContent = document.querySelector("#brushSizeSlider").value;
 }, 100);
 
+// when you click a paint:
+// ⑴ Change the overall colour value of the stroke
+// ⑵ Update the cursor paint brush
+// ⑶ Add the .selected class tot he chosen paint colour
+// ⑷ Remove the .selected class from the other paint colours
 
-// when you click a paint: (A)
+const paintColours = document.querySelectorAll(".colours img");
+
+paintColours.forEach(function (paintColour) {
+	paintColour.addEventListener("click", () => {
+		ctx.strokeStyle = paintColour.dataset.hexcode;
+
+        canvas.style.cursor = "url(../assets/pb-" + paintColour.id + ".ico), auto";
+        document.querySelector('.colour-palette').style.cursor = "url(../assets/pb-" + paintColour.id + ".ico), auto";
+        document.querySelector('.colours').style.cursor = "url(../assets/pb-" + paintColour.id + ".ico), auto";
+        document.querySelectorAll('.colours img').forEach(function (x) {
+            x.style.cursor = "url(../assets/pb-" + paintColour.id + ".ico), auto";
+        });
+
+
+		// Remove the .selected class from all items
+		paintColours.forEach((otherColour) => {
+			otherColour.classList.remove("selected");
+		});
+
+		paintColour.classList.add("selected");
+	});
+});
+
+document.querySelector('#erase').addEventListener('click', () => {
+    ctx.strokeStyle = 'white';
+
+        canvas.style.cursor = "url(../assets/pb-clear.ico), auto";
+        document.querySelector('.colour-palette').style.cursor = "url(../assets/pb-clear.ico), auto";
+        document.querySelector('.colours').style.cursor = "url(../assets/pb-clear.ico), auto";
+        document.querySelectorAll('.colours img').forEach(function (x) {
+            x.style.cursor = "url(../assets/pb-clear.ico";
+        });
+})
