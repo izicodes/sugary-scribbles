@@ -161,35 +161,35 @@ body {
 				.slider-container {
 					width: 100%;
 
-                    #brushSizeSlider {
-                        -webkit-appearance: none;
-                        appearance: none;
-                        width: 100%;
-                        height: 20px;
-                        background: #ffffff;
-                        border: 2px solid #c8ad8e;
-                        outline: none;
-                        //  #FBB7B6
-    
-                        &::-webkit-slider-thumb {
-                            -webkit-appearance: none;
-                            appearance: none;
-                            width: 17px;
-                            height: 17px;
-                            background-color: #fbb7b6;
-                            border-radius: 50%;
-                            -webkit-border-radius: 50%;
-                            -moz-border-radius: 50%;
-                            -ms-border-radius: 50%;
-                            -o-border-radius: 50%;
-                        }
-    
-                        border-radius: 20px;
-                        -webkit-border-radius: 20px;
-                        -moz-border-radius: 20px;
-                        -ms-border-radius: 20px;
-                        -o-border-radius: 20px;
-                    }
+					#brushSizeSlider {
+						-webkit-appearance: none;
+						appearance: none;
+						width: 100%;
+						height: 20px;
+						background: #ffffff;
+						border: 2px solid #c8ad8e;
+						outline: none;
+						//  #FBB7B6
+
+						&::-webkit-slider-thumb {
+							-webkit-appearance: none;
+							appearance: none;
+							width: 17px;
+							height: 17px;
+							background-color: #fbb7b6;
+							border-radius: 50%;
+							-webkit-border-radius: 50%;
+							-moz-border-radius: 50%;
+							-ms-border-radius: 50%;
+							-o-border-radius: 50%;
+						}
+
+						border-radius: 20px;
+						-webkit-border-radius: 20px;
+						-moz-border-radius: 20px;
+						-ms-border-radius: 20px;
+						-o-border-radius: 20px;
+					}
 
 					label {
 						text-align: center;
@@ -205,15 +205,16 @@ body {
 				}
 
 				.options {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 70px;
+					display: flex;
+					justify-content: space-between;
+					margin-top: 70px;
 
-                    img:hover, img:focus {
-                        filter: brightness(1) contrast(0.8) saturate(3) hue-rotate(0deg);
-                        -webkit-filter: brightness(1) contrast(0.8) saturate(3) hue-rotate(0deg);
+					img:hover,
+					img:focus {
+						filter: brightness(0.8) contrast(1) saturate(4) hue-rotate(0deg);
+						-webkit-filter: brightness(0.8) contrast(1) saturate(4) hue-rotate(0deg);
 }
-                }
+				}
 			}
 		}
 	}
@@ -227,8 +228,8 @@ main {
 
 	canvas {
 		background-color: white;
-		height: 100%;
-		width: 100%;
+		height: 760px;
+		width: 760px;
 		outline: 10px solid #e8dff4;
 		cursor: url(../assets/pb-green.ico), auto !important;
 

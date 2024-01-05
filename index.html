@@ -31,11 +31,11 @@
 						<section class="colour-palette">
 							<div class="gap"></div>
 							<div class="colours">
-								<img src="assets/pink-blob.png" id="pink" />
-								<img src="assets/purple-blob.png" id="purple" />
-								<img src="assets/blue-blob.png"  id="blue" />
-								<img src="assets/green-blob.png" id="green" class="selected" />
-								<img src="assets/yellow-blob.png" id="yellow" />
+								<img src="assets/pink-blob.png" id="pink" data-hexcode="#FFCEE4" />
+								<img src="assets/purple-blob.png" id="purple" data-hexcode="#E8DFF4" />
+								<img src="assets/blue-blob.png"  id="blue" data-hexcode="#BEEBF9" />
+								<img src="assets/green-blob.png" id="green" class="selected" data-hexcode="#D6F3CA" />
+								<img src="assets/yellow-blob.png" id="yellow" data-hexcode="#F9F6BE" />
 							</div>
 						</section>
 						<div class="slider-container">
@@ -43,17 +43,18 @@
 							<label for="brushSizeSlider">Brush size: <span id="currentSize">20</span></label>
 						</div>
 						<div class="options">
-							<img src="assets/dl.png" alt="download button" />
-							<img src="assets/erase.png" alt="eraser button" />
-							<img src="assets/delete.png" alt="delete all button" />
+							<img src="assets/dl.png" alt="download button" id="download" />
+							<img src="assets/erase.png" alt="eraser button" id="erase" />
+							<img src="assets/delete.png" alt="delete all button" id="delete" />
 						</div>
 					</div>
 				</aside>
 				<main>
-					<canvas id="myCanvas"></canvas>
+					<canvas id="myCanvas" height="760px" width="760px"></canvas>
 				</main>
 			</div>
 			<footer>made with ♥ ~ izicodes</footer>
 		</div>
+		<script src="src/script.js"></script>
 	</body>
 </html>
