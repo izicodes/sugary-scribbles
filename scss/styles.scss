@@ -18,7 +18,7 @@ body {
 		// original width: 776px and height: 705px;
 		width: 1250px;
 		height: 1136px;
-		background-color: #edffe4;
+		background-color: #f7ffff;
 		border: 1px solid #cccccc;
 		border-top: none;
 
@@ -68,26 +68,182 @@ body {
 
 		.inner-wrapper {
 			display: grid;
-			grid-template-columns: 20% 80%;
+			grid-template-columns: 30% 70%;
 			height: 76%;
 		}
 
 		aside {
 			background-color: #f7ffff;
 			height: 100%;
-		}
-
-		main {
-			background-color: #f7ffff;
-			height: 100%;
-		}
-
-		footer {
-			background-color: #feeae9;
-			height: 3.2%;
-			color: rgba(66, 66, 66, 0.48);
 			@include flex(normal);
-			border-top: 1px solid #cccccc;
+			padding: 13px;
+
+			.container {
+				background-color: #fffdf3;
+				border: 1px solid #cccccc;
+				height: 100%;
+				width: 100%;
+				padding: 25px 30px;
+
+				h1 {
+					font-family: "Shantell Sans", cursive;
+					color: #fbb7b6;
+					text-align: center;
+					font-size: 2.7rem;
+					margin-bottom: 20px;
+				}
+
+				p {
+					text-align: center;
+					margin-bottom: 20px;
+				}
+
+				hr {
+					border: none;
+					border-top: 5px dotted rgba(0, 0, 0, 0.28);
+					outline: none;
+					margin-bottom: 40px;
+				}
+
+				.colour-palette {
+					background-color: #c8ad8e;
+					width: 100%;
+					height: 46%;
+					margin-bottom: 30px;
+					border-radius: 60%;
+					-webkit-border-radius: 60%;
+					-moz-border-radius: 60%;
+					-ms-border-radius: 60%;
+					-o-border-radius: 60%;
+					position: relative;
+					box-shadow: -7px 7px 0 0 rgba(138, 69, 69, 0.73);
+					@include flex(normal);
+					gap: 20px;
+
+					.gap {
+						position: absolute;
+						background-color: #fffdf3;
+						box-shadow: inset -7px 7px 0 0 rgba(138, 69, 69, 0.73);
+						top: 10%;
+						left: 32%;
+						height: 60px;
+						width: 100px;
+						border-radius: 60%;
+						-webkit-border-radius: 60%;
+						-moz-border-radius: 60%;
+						-ms-border-radius: 60%;
+						-o-border-radius: 60%;
+					}
+
+					.colours {
+						position: absolute;
+						left: 12px;
+						display: grid;
+						margin-top: 70px;
+						gap: 10px;
+						@include grid-center-last(3);
+						height: fit-content;
+
+						img.selected,
+						img:hover {
+							filter: drop-shadow(-3px 3px 0px rgba(148, 108, 107, 0.72));
+							-webkit-filter: drop-shadow(-3px 3px 0px rgba(148, 108, 107, 0.72));
+						}
+					}
+				}
+
+				.colour-palette,
+				.colours,
+				.colours img {
+					cursor: url(../assets/pb-green.ico), auto !important;
+				}
+
+				.slider-container {
+					width: 100%;
+
+                    #brushSizeSlider {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 100%;
+                        height: 20px;
+                        background: #ffffff;
+                        border: 2px solid #c8ad8e;
+                        outline: none;
+                        //  #FBB7B6
+    
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 17px;
+                            height: 17px;
+                            background-color: #fbb7b6;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                        }
+    
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                    }
+
+					label {
+						text-align: center;
+						font-weight: 900;
+						color: rgba(66, 66, 66, 0.6) !important;
+						width: 100%;
+						display: block;
+
+						span {
+							color: rgba(66, 66, 66, 0.6) !important;
+						}
+					}
+				}
+
+				.options {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 70px;
+
+                    img:hover, img:focus {
+                        filter: brightness(1) contrast(0.8) saturate(3) hue-rotate(0deg);
+                        -webkit-filter: brightness(1) contrast(0.8) saturate(3) hue-rotate(0deg);
+}
+                }
+			}
 		}
 	}
+}
+
+main {
+	background-color: #f7ffff;
+	height: 100%;
+	@include flex(normal);
+	padding: 40px 40px;
+
+	canvas {
+		background-color: white;
+		height: 100%;
+		width: 100%;
+		outline: 10px solid #e8dff4;
+		cursor: url(../assets/pb-green.ico), auto !important;
+
+		border-radius: 35px;
+		-webkit-border-radius: 35px;
+		-moz-border-radius: 35px;
+		-ms-border-radius: 35px;
+		-o-border-radius: 35px;
+	}
+}
+
+footer {
+	background-color: #feeae9;
+	height: 3.2%;
+	color: rgba(66, 66, 66, 0.48);
+	@include flex(normal);
+	border-top: 1px solid #cccccc;
 }

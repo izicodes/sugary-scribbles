@@ -21,16 +21,39 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
-			<header>
-                <img id="title-image" src="assets/title.png" alt="title image saying "Sugary Scribbles">
-            </header>
+			<header><img id="title-image" src="assets/title.png" alt="title image saying "Sugary Scribbles"></header>
 			<div class="inner-wrapper">
-				<aside>hello</aside>
-				<main>hello</main>
+				<aside>
+					<div class="container">
+						<h1>Welcome</h1>
+						<p>Unleash your creativity and craft charming masterpieces that resonate with sweetness. Once you're done, save your creation and spread the joy online!</p>
+						<hr />
+						<section class="colour-palette">
+							<div class="gap"></div>
+							<div class="colours">
+								<img src="assets/pink-blob.png" id="pink" />
+								<img src="assets/purple-blob.png" id="purple" />
+								<img src="assets/blue-blob.png"  id="blue" />
+								<img src="assets/green-blob.png" id="green" class="selected" />
+								<img src="assets/yellow-blob.png" id="yellow" />
+							</div>
+						</section>
+						<div class="slider-container">
+							<input type="range" min="1" max="50" value="25" class="slider" id="brushSizeSlider" />
+							<label for="brushSizeSlider">Brush size: <span id="currentSize">20</span></label>
+						</div>
+						<div class="options">
+							<img src="assets/dl.png" alt="download button" />
+							<img src="assets/erase.png" alt="eraser button" />
+							<img src="assets/delete.png" alt="delete all button" />
+						</div>
+					</div>
+				</aside>
+				<main>
+					<canvas id="myCanvas"></canvas>
+				</main>
 			</div>
-			<footer>
-                made with ♥ ~ izicodes
-            </footer>
+			<footer>made with ♥ ~ izicodes</footer>
 		</div>
 	</body>
 </html>
