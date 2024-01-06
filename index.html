@@ -15,10 +15,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Sugary Scribbles</title>
 		<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+			integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="src/styles.css" />
+		<link rel="stylesheet" href="src/responsive.css" />
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -34,8 +39,8 @@
 							<div class="colours">
 								<img src="assets/pink-blob.png" id="pink" class="selected" data-hexcode="#FFCEE4" />
 								<img src="assets/purple-blob.png" id="purple" data-hexcode="#E8DFF4" />
-								<img src="assets/blue-blob.png"  id="blue" data-hexcode="#BEEBF9" />
-								<img src="assets/green-blob.png" id="green"  data-hexcode="#D6F3CA" />
+								<img src="assets/blue-blob.png" id="blue" data-hexcode="#BEEBF9" />
+								<img src="assets/green-blob.png" id="green" data-hexcode="#D6F3CA" />
 								<img src="assets/yellow-blob.png" id="yellow" data-hexcode="#F9F6BE" />
 							</div>
 						</section>
@@ -55,6 +60,14 @@
 				</main>
 			</div>
 			<footer>made with ♥ ~ izicodes</footer>
+		</div>
+		<div class="small-screen-error-wrapper">
+			<img src="assets/title.png" alt="title image">
+			<h1>Oops! You need a larger canvas!</h1>
+			<p>We're sorry, but Sugary Scribbles works best on larger screens to provide an optimal doodling experience. </p>
+			<p>Grab a laptop, or desktop for the full creative adventure! 🎨✨</p>
+			<p>Thank you for understanding!</p>
+			<p>~ izicodes ~</p>
 		</div>
 		<script src="src/script.js"></script>
 	</body>

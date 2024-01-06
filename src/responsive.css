@@ -272,4 +272,23 @@ footer {
 
 .hide {
   display: none;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Tablets */
+@media screen and (max-width: 1000px) {
+  .small-screen-error-wrapper {
+    display: block;
+  }
+  .main-wrapper {
+    display: none;
+  }
+}
+/* Small Screens - Laptop & Computer */
+@media screen and (min-width: 1001px) and (max-width: 2500px) {
+  .small-screen-error-wrapper {
+    display: none !important;
+  }
+  .main-wrapper {
+    display: block !important;
+  }
+}/*# sourceMappingURL=responsive.css.map */

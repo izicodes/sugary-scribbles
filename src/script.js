@@ -1,17 +1,16 @@
+//  ---- VARIABLES ----
 const canvas = document.querySelector("#myCanvas");
 const ctx = canvas.getContext("2d");
-
 const canvasOffsetX = canvas.offsetLeft;
 const canvasOffsetY = canvas.offsetTop;
-
 const aside = document.querySelector("aside");
-
 let isPainting = false;
 let brushSize = 25;
 let startX;
 let startY;
 ctx.strokeStyle = "#FFCEE4";
 
+//  ---- CANVAS FUNCTIONALITY ----
 aside.addEventListener("click", (e) => {
 	if (e.target.id === "delete") {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -28,23 +27,25 @@ aside.addEventListener("change", (e) => {
 setInterval(function () {
 	document.querySelector("#currentSize").textContent = document.querySelector("#brushSizeSlider").value;
 	brushSize = document.querySelector("#brushSizeSlider").value;
+
+	const draw = (e) => {
+		if (!isPainting) {
+			return;
+		}
+	
+		ctx.lineWidth = brushSize;
+		ctx.lineCap = "round";
+	
+		// Adjust the coordinates to be relative to the canvas
+		const x = e.clientX - canvasOffsetX;
+		const y = e.clientY - canvasOffsetY;
+	
+		ctx.lineTo(x, y);
+		ctx.stroke();
+	};
+	canvas.addEventListener("mousemove", draw);
 }, 100);
 
-const draw = (e) => {
-	if (!isPainting) {
-		return;
-	}
-
-	ctx.lineWidth = brushSize;
-	ctx.lineCap = "round";
-
-	// Adjust the coordinates to be relative to the canvas
-	const x = e.clientX - canvasOffsetX;
-	const y = e.clientY - canvasOffsetY;
-
-	ctx.lineTo(x, y);
-	ctx.stroke();
-};
 
 
 canvas.addEventListener("mousedown", (e) => {
@@ -61,19 +62,10 @@ canvas.addEventListener("mouseup", (e) => {
 	ctx.beginPath();
 });
 
-canvas.addEventListener("mousemove", draw);
+// canvas.addEventListener("mousemove", draw);
 
-// When you change the slider, update the brush size number.
-setInterval(function () {
-	document.querySelector("#currentSize").textContent = document.querySelector("#brushSizeSlider").value;
-}, 100);
 
-// when you click a paint:
-// ⑴ Change the overall colour value of the stroke
-// ⑵ Update the cursor paint brush
-// ⑶ Add the .selected class tot he chosen paint colour
-// ⑷ Remove the .selected class from the other paint colours
-
+//  ---- SELECTING PAINT COLOUR ----
 const paintColours = document.querySelectorAll(".colours img");
 
 paintColours.forEach(function (paintColour) {
@@ -97,6 +89,7 @@ paintColours.forEach(function (paintColour) {
 	});
 });
 
+//  ---- ERASER TOOL ----
 document.querySelector('#erase').addEventListener('click', () => {
     ctx.strokeStyle = 'white';
 
